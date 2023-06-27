@@ -1,5 +1,5 @@
 [[redirects]]
-    from = "/decks"
+    from = "/get-decks"
     to = "https://archidekt.com/api/decks/cards/?owner=HyperWalrus"
     status = 200
     force = true
