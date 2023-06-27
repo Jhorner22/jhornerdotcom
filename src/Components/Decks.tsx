@@ -11,7 +11,7 @@ function Decks() {
     console.log(env)
     useEffect(() => {
         async function getDecks() {
-             const decks = await fetch(env !== 'production' ? "https://archidekt.com/api/decks/cards/?owner=HyperWalrus" : '/get-decks')
+             const decks = await fetch(env !== 'production' ? "https://archidekt.com/api/decks/cards/?owner=HyperWalrus&pageSize=50" : '/get-decks')
             .then((response) => response.json() as unknown as RawDeck)
             setDecks(decks.results)
         }

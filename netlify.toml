@@ -1,6 +1,6 @@
 [[redirects]]
     from = "/get-decks"
-    to = "https://archidekt.com/api/decks/cards/?owner=HyperWalrus"
+    to = "https://archidekt.com/api/decks/cards/?owner=HyperWalrus&pageSize=50"
     status = 200
     force = true
     headers = {X-From = "Netlify"}
