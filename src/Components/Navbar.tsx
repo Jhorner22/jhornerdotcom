@@ -35,7 +35,7 @@ function Navbar() {
                 </Link>
                 <Link to='/decks' className="flex py-3">
                     <p>
-                        Decks
+                        Magic Decks
                     </p>
                 </Link>
                 <button onClick={resumeButton} className="flex bg-[#7C6767] text-white rounded-full px-[30px] py-3 font-semibold">

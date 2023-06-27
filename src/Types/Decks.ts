@@ -8,4 +8,5 @@ export interface RawDeck{
 export interface Deck{
     name:string;
     featured:string;
+    id:number
 }

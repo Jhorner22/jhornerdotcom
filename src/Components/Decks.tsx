@@ -19,25 +19,26 @@ function Decks() {
     },[])
 
 return (
-    <div className='flex flex-col gap-3 m-2 text-[#2A2539]'>
-      <Navbar/>
-        <div className='flex lg:flex-row flex-col h-full  gap-2'>
-            <div className='flex rounded-[30px] bg-[#EAE9E5] p-6 flex flex-col justify-between'>
-                <div className="flex flex-row gap-4 rounded-[30px]">
-                    {decks.map((deck) => {
-                    return(
-                        <p key={deck.name}>
-                            {
-                                deck.name
-                            }
-                            {
-                                <img src={deck.featured} className="rounded-[30px]" alt="deckimage"></img>
-                            }
-                        </p>
-                        )
-                    })}
-                </div>
-            </div>
+    <div className="flex flex-col gap-3 m-2 text-[#2A2539]">
+        <Navbar/>
+
+        {/* Deck list */}
+        <div className="flex border bg-[#EAE9E5] rounded-[30px] p-6 overflow-x-auto" onClick={() => {
+            console.log('bitch');
+        }}>
+            {decks.map((deck) => {
+                return(
+                        <div key={deck.name} className="flex flex-col flex-shrink-0 w-96 hover:brightness-50">
+                            <img src={deck.featured} alt={deck.name} className="rounded-[30px] p-2"/>
+                            <p>{deck.name}</p>
+                        </div>
+                    )
+                })}
+        </div>
+
+        {/* TODO: Card list */}
+        <div className="flex border bg-[#EAE9E5] rounded-[30px] p-6 overflow-x-auto">
+            cards
         </div>
     </div>
 )
