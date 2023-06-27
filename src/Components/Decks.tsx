@@ -2,9 +2,10 @@ import React, {useState, useEffect} from "react";
 import Navbar from "./Navbar";
 import { Deck, RawDeck } from "../Types/Decks";
 
+const env = process.env.NODE_ENV;
 
 function Decks() {
-    const env = process.env.NODE_ENV;
+    
     const [decks,setDecks] = useState([] as Deck[])
 
     
