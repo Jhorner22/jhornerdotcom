@@ -20,11 +20,11 @@ function Home() {
   return (
     <div className='flex flex-col gap-3 m-2 text-[#2A2539]'>
       <Navbar/>
-      <div className='flex flex-row gap-2'>
-        <div className='flex w-[62.5%] rounded-[30px] bg-[#EAE9E5] p-6 flex flex-col justify-between'>
+      <div className='flex lg:flex-row flex-col gap-2'>
+        <div className='flex rounded-[30px] bg-[#EAE9E5] p-6 flex flex-col justify-between lg:w-3/4'>
           <div>
             <h1 className='font-semibold text-[48px] '>Who is Joseph P Horner?</h1>
-            <p className='text-[24px]'>I am a software engineer that enjoys finding ways to improve efficiency with Python scripts, and creating IoT systems.</p>
+            <p className='text-[24px]'>I am a software engineer that enjoys finding ways to improve efficiency with Python scripts, and creating IoT systems. I also have a penchant for talking at length about the history of the X-Men</p>
           </div>
           <div className='flex flex-row '> 
           <Link to='/'>
@@ -38,7 +38,7 @@ function Home() {
           </a>
           </div>
         </div>
-        <div className='flex w-[37.5%] rounded-[30px] '>
+        <div className='flex rounded-[30px] lg:w-1/4'>
           <img src='/portrait.jpg' className='rounded-[30px]' alt='portrait'/>
         </div>
       </div>

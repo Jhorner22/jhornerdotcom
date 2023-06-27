@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './Home';
+import Books from './Components/Books';
+import Decks from './Components/Decks'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
@@ -13,6 +15,8 @@ root.render(
     <BrowserRouter>
       <Routes>
           <Route index element={<Home />} />
+          <Route path='/books' element={<Books />} />
+          <Route path='/decks' element={<Decks />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

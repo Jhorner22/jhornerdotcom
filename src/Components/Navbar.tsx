@@ -25,12 +25,22 @@ function Navbar() {
             <div className="flex flex-row gap-2.5">
                 <Link to='/' className="flex py-3">
                     <p>
-                      Home  
+                        Home  
                     </p>
                 </Link>
-                    <button onClick={resumeButton} className="flex bg-[#7C6767] text-white rounded-full px-[30px] py-3 font-semibold">
-                      Resume  
-                    </button>
+                <Link to='/books' className="flex py-3">
+                    <p>
+                        Books
+                    </p>
+                </Link>
+                <Link to='/decks' className="flex py-3">
+                    <p>
+                        Decks
+                    </p>
+                </Link>
+                <button onClick={resumeButton} className="flex bg-[#7C6767] text-white rounded-full px-[30px] py-3 font-semibold">
+                    Resume  
+                </button>
             </div>
         </div>
     );
