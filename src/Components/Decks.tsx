@@ -23,15 +23,20 @@ return (
       <Navbar/>
         <div className='flex lg:flex-row flex-col h-full  gap-2'>
             <div className='flex rounded-[30px] bg-[#EAE9E5] p-6 flex flex-col justify-between'>
-                {decks.map((deck) => {
+                <div className="flex flex-row gap-4 rounded-[30px]">
+                    {decks.map((deck) => {
                     return(
                         <p key={deck.name}>
                             {
                                 deck.name
                             }
+                            {
+                                <img src={deck.featured} className="rounded-[30px]"></img>
+                            }
                         </p>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         </div>
     </div>
