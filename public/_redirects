@@ -1,2 +1,2 @@
-/get-decks    /get-decks   200
+/get-decks    https://archidekt.com/api/decks/cards/?owner=HyperWalrus   200
 /*    /index.html   200
