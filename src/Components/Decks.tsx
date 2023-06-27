@@ -4,13 +4,13 @@ import { Deck, RawDeck } from "../Types/Decks";
 
 
 function Decks() {
-
+    const env = process.env.NODE_ENV;
     const [decks,setDecks] = useState([] as Deck[])
 
     
     useEffect(() => {
         async function getDecks() {
-             const decks = await fetch("https://archidekt.com/api/decks/cards/?owner=HyperWalrus")
+             const decks = await fetch(env !== 'production' ? "https://archidekt.com/api/decks/cards/?owner=HyperWalrus" : '/get-decks')
             .then((response) => response.json() as unknown as RawDeck)
             setDecks(decks.results)
         }
@@ -24,7 +24,7 @@ return (
             <div className='flex rounded-[30px] bg-[#EAE9E5] p-6 flex flex-col justify-between'>
                 {decks.map((deck) => {
                     return(
-                        <p>
+                        <p key={deck.name}>
                             {
                                 deck.name
                             }
