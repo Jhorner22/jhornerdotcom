@@ -31,7 +31,7 @@ return (
                                 deck.name
                             }
                             {
-                                <img src={deck.featured} className="rounded-[30px]"></img>
+                                <img src={deck.featured} className="rounded-[30px]" alt="deckimage"></img>
                             }
                         </p>
                         )
