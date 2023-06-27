@@ -8,7 +8,7 @@ function Decks() {
     
     const [decks,setDecks] = useState([] as Deck[])
 
-    
+    console.log(env)
     useEffect(() => {
         async function getDecks() {
              const decks = await fetch(env !== 'production' ? "https://archidekt.com/api/decks/cards/?owner=HyperWalrus" : '/get-decks')
